@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JomJalan - My Travel Planner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🌍 JomJalan Travel Planner</h1>
+        <nav>
+            <a href="index.html">Explore & Suggestions</a>
+            <a href="planner.html" class="active">My Travel Planner (CRUD)</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Create / Update Form Section -->
+        <section class="card">
+            <h2 id="formTitle">Create New Travel Plan</h2>
+            <form id="planForm">
+                <input type="hidden" id="planIndex" value="">
+                <input type="text" id="destinationInput" placeholder="Destination (e.g., Tokyo, Japan)" required style="width: 100%; box-sizing: border-box; margin-bottom: 10px;">
+                <input type="date" id="dateInput" required style="margin-bottom: 10px;">
+                <input type="text" id="notesInput" placeholder="Activity Notes / Plan details" required style="width: 100%; box-sizing: border-box; margin-bottom: 10px;">
+                <button type="submit" id="saveBtn">Save Plan</button>
+                <button type="button" id="cancelBtn" style="background-color: #6c757d; display: none;">Cancel</button>
+            </form>
+        </section>
+
+        <!-- Read / Delete Section -->
+        <section class="card">
+            <h3>Saved Itineraries</h3>
+            <ul id="planList" style="list-style-type: none; padding: 0;">
+                <!-- Dynamically loaded via Local Storage -->
+            </ul>
+        </section>
+    </main>
+
+    <script src="planner.js"></script>
+</body>
+</html>

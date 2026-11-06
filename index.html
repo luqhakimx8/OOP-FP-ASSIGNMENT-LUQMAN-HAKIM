@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JomJalan - Explore Destinations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🌍 JomJalan Travel Explorer</h1>
+        <nav>
+            <a href="index.html" class="active">Explore & Suggestions</a>
+            <a href="planner.html">My Travel Planner (CRUD)</a>
+        </nav>
+    </header>
+
+<main class="container">
+        <section class="card">
+            <h2>Search Destination & Weather</h2>
+            <select id="countrySelect">
+                <option value="">-- Select Country --</option>
+                <option value="Japan">Japan</option>
+                <option value="Malaysia">Malaysia</option>
+                <option value="Switzerland">Switzerland</option>
+            </select>
+            
+            <select id="tierSelect">
+                <option value="budget">Budget Traveller</option>
+                <option value="mid" selected>Mid-Range Traveller</option>
+                <option value="luxury">Luxury Traveller</option>
+            </select>
+
+            <div style="margin-top: 10px;">
+                <input type="number" id="daysInput" placeholder="Number of Days" min="1" style="width: 140px;">
+                <input type="number" id="travelersInput" placeholder="Travelers Count" min="1" style="width: 140px;">
+            </div>
+
+            <button id="searchBtn" style="margin-top: 10px;">Fetch Details & Calculate Cost</button>
+        </section>
+
+        <section id="resultsContainer" class="card">
+            <h3>API Data & Suggestions</h3>
+            <p id="weatherDisplay">Weather details will appear here...</p>
+            <p id="suggestionDisplay">Activity suggestions will appear here...</p>
+            <p id="calculationDisplay" style="font-weight: bold; color: #0077b6;">Estimated Trip Cost will appear here...</p>
+        </section>
+    </main>
+    <script src="renderer.js"></script>
+</body>
+</html>
